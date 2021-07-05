@@ -14,8 +14,6 @@ const Sidenave = () => {
       }
     return (
         <>
-            
-
             <div id="mySidenav" className="sidenav">
                 <Router >
                         <Link className="closebtn" onClick={() => closeNav()}>&times;</Link>

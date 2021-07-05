@@ -4,7 +4,8 @@ const Section = () => {
 
 
     return (
-        <>            
+        <>
+            {/* <DoctorPage */}
             <div id="section">
 
                     <h1 className="fw-bold text-center">Quick Section For Scheduling <br /> For Doctor</h1>
