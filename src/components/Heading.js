@@ -1,5 +1,4 @@
 import React  from 'react';
-import Sidenav from './Sidenav';
 import Navbar from './Navbar';
 import Button from './Button';
 import './Heading.css'
@@ -10,7 +9,6 @@ const Heading = () => {
         <div className="header ">
             <div className="container">
                 <Navbar />
-                <Sidenav />
 
                 <div className="row">
                     <div className="col-sm-10 col-md-7 col-lg-7 col-texts">

@@ -1,5 +1,7 @@
 import React from 'react';
 import Button from './Button';
+
+import './Sidenav.css'
 import './Navbar.css'
 import {
     BrowserRouter as Router,
@@ -10,7 +12,9 @@ const Navbar = () => {
     function openNav() {
         document.getElementById("mySidenav").style.width = "100%";
     }
-
+    function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+      }
     return (
         <>
             <nav className="navbar navbar-expand-lg">
@@ -22,9 +26,7 @@ const Navbar = () => {
                     <button className="navbar-toggler" onClick={()=> openNav()}>
                         <span className="navbar-toggler-icon" ></span>
                     </button>
-                    
-
-
+                   
                         <div className="collapse navbar-collapse text-center" id="navbarNav">
                             <ul className="navbar-nav ms-auto">
                                 <li className="nav-item">
@@ -44,6 +46,21 @@ const Navbar = () => {
                         </div>
                     </Router >
             </nav>
+            <div id="mySidenav" className="sidenav">
+                        <Router >
+                                <Link className="closebtn" onClick={() => closeNav()}>&times;</Link>
+                                <Link to="#">Home</Link>
+                                <Link to="#">Features</Link>
+                                <Link to="#">Find Doctor</Link>
+                                <Link to="#">Fasilities</Link>
+                        </Router>
+                    </div>
+
+                <div id="main">
+                
+                </div>
+
+
         </>
      );
 }

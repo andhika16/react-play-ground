@@ -5,7 +5,7 @@ function App() {
   return (
     <>
     
-      <Heading />
+    <Heading />
     <Section />
     </>
   );
