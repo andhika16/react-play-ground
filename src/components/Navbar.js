@@ -1,11 +1,22 @@
 import React from 'react';
 import Button from './Button';
+
+import './Sidenav.css'
 import './Navbar.css'
 import {Link} from "react-router-dom";
 const Navbar = ({sidenav}) => {
 
+<<<<<<< HEAD
   
 
+=======
+    function openNav() {
+        document.getElementById("mySidenav").style.width = "100%";
+    }
+    function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+      }
+>>>>>>> test
     return (
         <>
  
@@ -18,6 +29,10 @@ const Navbar = ({sidenav}) => {
                     <button className="navbar-toggler" onClick={sidenav()}>
                         <i class="fas fa-bars"></i>
                     </button>
+<<<<<<< HEAD
+=======
+                   
+>>>>>>> test
                         <div className="collapse navbar-collapse text-center" id="navbarNav">
                             <ul className="navbar-nav ms-auto">
                                 <li className="nav-item">
@@ -34,9 +49,30 @@ const Navbar = ({sidenav}) => {
                                 </li>
                             </ul>
                         <Button title='Follow Us' />
+<<<<<<< HEAD
                     </div>
                 </div>         
                 </nav>
+=======
+                        </div>
+                    </Router >
+            </nav>
+            <div id="mySidenav" className="sidenav">
+                        <Router >
+                                <Link className="closebtn" onClick={() => closeNav()}>&times;</Link>
+                                <Link to="#">Home</Link>
+                                <Link to="#">Features</Link>
+                                <Link to="#">Find Doctor</Link>
+                                <Link to="#">Fasilities</Link>
+                        </Router>
+                    </div>
+
+                <div id="main">
+                
+                </div>
+
+
+>>>>>>> test
         </>
      );
 }

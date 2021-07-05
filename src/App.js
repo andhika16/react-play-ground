@@ -17,6 +17,7 @@ function App() {
     
   return (
     <>
+<<<<<<< HEAD
 
           <Router >
           <Navbar sidenav={() => openNav} />
@@ -32,6 +33,11 @@ function App() {
         </Switch>
         </Router>
    
+=======
+    
+    <Heading />
+    <Section />
+>>>>>>> test
     </>
   );
 }

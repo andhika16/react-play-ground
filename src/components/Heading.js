@@ -1,5 +1,9 @@
 import React  from 'react';
+<<<<<<< HEAD
 import Sidenav from './Sidenav';
+=======
+import Navbar from './Navbar';
+>>>>>>> test
 import Button from './Button';
 import './Heading.css'
 
@@ -8,7 +12,12 @@ const Heading = () => {
     return (
         <div className="header ">
             <div className="container">
+<<<<<<< HEAD
                
+=======
+                <Navbar />
+
+>>>>>>> test
                 <div className="row">
                     <div className="col-sm-10 col-md-7 col-lg-7 col-texts">
                         <h1 className="fs-1 fw-bold" style={{width:'400px'}}>Protect Your Health and take care of your health</h1>
