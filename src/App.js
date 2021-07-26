@@ -1,7 +1,6 @@
 import Heading from './components/Heading';
 import Section from './components/Section';
 import DoctorPage from './components/DoctorPage';
-import Sidenav from './components/Sidenav';
 import Navbar from './components/Navbar';
 import {
   BrowserRouter as Router,
@@ -11,17 +10,11 @@ import {
 } from "react-router-dom";
 import './App.css';
 function App() {
-  function openNav() {
-        document.getElementById("mySidenav").style.width = "100%";
-  }
-    
+
   return (
     <>
-<<<<<<< HEAD
-
-          <Router >
-          <Navbar sidenav={() => openNav} />
-          <Sidenav />
+        <Router >
+          <Navbar  />
         <Switch>
           <Route  path="/doctorPage">
             <DoctorPage />
@@ -33,11 +26,6 @@ function App() {
         </Switch>
         </Router>
    
-=======
-    
-    <Heading />
-    <Section />
->>>>>>> test
     </>
   );
 }
