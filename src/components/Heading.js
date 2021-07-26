@@ -15,6 +15,10 @@ const Heading = () => {
     return (
         <div className="header ">
             <div className="container">
+<<<<<<< HEAD
+=======
+           
+>>>>>>> test
 
                 <div className="row">
                     <div className="col-sm-10 col-md-7 col-lg-7 col-texts">
