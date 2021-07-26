@@ -1,5 +1,4 @@
 import React  from 'react';
-import Navbar from './Navbar';
 import Button from './Button';
 import './Heading.css'
 
@@ -8,7 +7,7 @@ const Heading = () => {
     return (
         <div className="header ">
             <div className="container">
-                <Navbar />
+           
 
                 <div className="row">
                     <div className="col-sm-10 col-md-7 col-lg-7 col-texts">

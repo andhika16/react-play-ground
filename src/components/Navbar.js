@@ -1,68 +1,61 @@
 import React from 'react';
 import Button from './Button';
+import '../script.js'
 
-import './Sidenav.css'
 import './Navbar.css'
 import {
     BrowserRouter as Router,
     Link
   } from "react-router-dom";
-const Navbar = () => {
+const Navbar = () =>
+    {
 
-    function openNav() {
-        document.getElementById("mySidenav").style.width = "100%";
+    const navside = () => {
+        const menuToggle = document.querySelector('.menu-toggle input');
+        const nav = document.querySelector('nav ul');
+        
+        menuToggle.addEventListener('click', function () {
+            nav.classList.toggle('slide');
+        })
     }
-    function closeNav() {
-        document.getElementById("mySidenav").style.width = "0";
-      }
+    
+    
     return (
         <>
-            <nav className="navbar navbar-expand-lg">
-                    <Router>
-                        <Link  className="navbar-brand" to="#">Navbar</Link>
-                    {/* <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span className="navbar-toggler-icon" ></span>
-                    </button> */}
-                    <button className="navbar-toggler" onClick={()=> openNav()}>
-                        <span className="navbar-toggler-icon" ></span>
-                    </button>
-                   
-                        <div className="collapse navbar-collapse text-center" id="navbarNav">
-                            <ul className="navbar-nav ms-auto">
-                                <li className="nav-item">
-                                <Link className="nav-link fw-bold" aria-current="page" to="#">Home</Link>
-                                </li>
-                                <li className="nav-item">
-                                <Link className="nav-link fw-bold" to="#">Features</Link>
-                                </li>
-                                <li className="nav-item">
-                                <Link className="nav-link fw-bold" to="#">Find Doctor</Link>
-                                </li>
-                                <li className="nav-item">
-                                <Link className="nav-link fw-bold" to="#">Fasilities</Link>
-                                </li>
-                            </ul>
-                        <Button title='Follow Us' />
-                        </div>
-                    </Router >
-            </nav>
-            <div id="mySidenav" className="sidenav">
-                        <Router >
-                                <Link className="closebtn" onClick={() => closeNav()}>&times;</Link>
-                                <Link to="#">Home</Link>
-                                <Link to="#">Features</Link>
-                                <Link to="#">Find Doctor</Link>
-                                <Link to="#">Fasilities</Link>
-                        </Router>
+            <nav>
+
+                <Router >
+                    <div className="logo">
+                        <h4>We Care</h4>
                     </div>
-
-                <div id="main">
-                
-                </div>
-
+                    <ul >
+                        <li>
+                            <Link to=''  className='link'>Home</Link>
+                        </li>
+                        <li>
+                            <Link to='' className='link'>Features</Link>
+                        </li>
+                        <li>
+                            <Link to='' className='link'>FInd Doctor</Link>
+                        </li>
+                        <li>
+                            <Link to='' className='link'>Fasilities</Link>
+                        </li>
+                        <Button title="Find" />
+                    </ul>
+                    <div className="menu-toggle">
+                        <input type="checkbox" onClick={() =>  navside() }/>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </Router>
+            </nav>
+           
 
         </>
-     );
+    );
+
 }
  
 export default Navbar;

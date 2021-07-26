@@ -10,11 +10,17 @@
     margin-right:50px ;
 }
 .content .box {
+    border : 1px black solid;
     border-radius: 5px;
-    box-shadow: 2px 2px 5px rgb(78, 78, 78);
     padding: 20px 20px;
-    margin: 10px;
-
+    margin: 15px;
+    
+}
+.content .box:hover {
+    box-shadow: 2px 2px 5px rgb(78, 78, 78);
+    transform: scale(1.0);
+    transition: all 1ms;
+    border: none;
 }
 
 .content .box p,h5{
