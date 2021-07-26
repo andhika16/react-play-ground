@@ -41,7 +41,7 @@ const Navbar = () =>
                         <li>
                             <Link to='' className='link'>Fasilities</Link>
                         </li>
-                        <Button title="Find" />
+                    <Button title="Find" />
                     </ul>
                     <div className="menu-toggle">
                         <input type="checkbox" onClick={() =>  navside() }/>

@@ -4,20 +4,20 @@ nav {
     background-color: #F3FDFE;
     padding-top: 10px;
     height: 80px;
-    align-items: center;
-    z-index: 9999;
+    align-items: baseline;
     box-sizing: border-box;
 }
 
-nav .logo {
+nav .logo h4{
     font-family: 'lato' sans-serif;
+    margin: 0;
 }
 nav ul {
     display: flex;
     list-style: none;
-    width: 70%;
+    margin: 0;
+    width: 60%;
     justify-content: space-around;
-    padding-top: 10px;
 }
 nav ul li .link{
     text-decoration: none;
