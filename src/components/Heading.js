@@ -17,10 +17,10 @@ const Heading = () => {
             <div className="container">
            
 
-                <div className="row">
+                <div className="row justify-content-center">
                     <div className="col-sm-10 col-md-7 col-lg-7 col-texts">
-                        <h1 className="fs-1 fw-bold" style={{width:'400px'}}>Protect Your Health and take care of your health</h1>
-                        <div className="row">
+                        <h1 className="fs-1 fw-bold" style={{width:'500px'}}>Protect Your Health and take care of your health</h1>
+                        <div className="row justify-content-center">
                             <div className="col-sm-5  col-md-8 col-lg-6 col-text">
                                 <i className="fa fa-calendar text-info" aria-hidden="true"></i>
                                 <h5 className="fw-bolder">Make Appointment</h5>
@@ -42,8 +42,8 @@ const Heading = () => {
                                 <p>Lorem ipsum dolor sit amet consectetur. Fugiat, similique?</p>
                             </div>
                             
-                        </div>
                         <Button size='button-medium' title='Book Now'/>
+                        </div>
                     </div>
                         <div className="d-none d-sm-block d-sm-none d-md-block col-md-5 col-lg-5 image">
                         <img src="img/2.png" className="img-fluid" alt="" />

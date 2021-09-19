@@ -1,14 +1,16 @@
 .button {
+    padding: 10px 10px;
     background-color: #0198B1;
-    padding: 5px 10px;
     border-radius: 5px;
     text-decoration: none;
     color: #fff;
 }
 
 .button-medium {
+    text-align: center;
+    padding: 5px 0px;
+    width: 30%;
     background-color: #0198B1;
-    padding: 5px 100px;
     border-radius: 5px;
     text-decoration: none;
     color: rgb(255, 253, 253);
