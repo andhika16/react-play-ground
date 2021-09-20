@@ -19,6 +19,45 @@ code {
 
 
 
+.page {
+  margin-top: 50px;
+  padding: 20px;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  background-color: rgb(255, 118, 118);
+  width: 90%;
+}
 
 
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: rgb(235, 235, 235);
+  max-width: 900px;
+  height: 900px;
+}
 
+.card {
+  padding: 10px;
+  box-sizing: border-box;
+  background-color: #fff;
+  border: 1px solid #000;
+  width: 300px;
+  margin: 10px;
+}
+
+.head {
+  border: 1px solid #000;
+  margin-top: 20px;
+  background-color: #fff;
+  border-radius: 20px;
+  width: 90%;
+}
+
+
+@media (max-width: 900px) {
+
+}
