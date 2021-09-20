@@ -1,8 +1,16 @@
-const Card = () => {
+import {Link} from 'react-router-dom';
+
+const Card = ({ post }) => {
+    
+    const { title, id } = post
+    const date = new Date()
     return (
-        <div className="card">
-            <h1>This is card</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, non.</p>
+        <div className="card" id={id}>
+            <Link>
+            <h1>{   }</h1>
+            <span></span>
+            <h4>{title}</h4>
+            </Link>
         </div>
     );
     

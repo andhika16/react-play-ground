@@ -1,0 +1,31 @@
+{
+  "posts": [
+    {
+      "title": "adasd",
+      "body": "asdad",
+      "id": 1
+    },
+    {
+      "title": "adsad",
+      "body": "asdsdsadasdsadsadasdasdasdasda",
+      "id": 2
+    },
+    {
+      "title": "bkjbk",
+      "body": "bkjbkjbj",
+      "id": 3
+    },
+    {
+      "title": "asdadsa",
+      "body": "asdasdasdada",
+      "date": "2021-09-20T12:20:27.646Z",
+      "id": 4
+    },
+    {
+      "title": "mantap",
+      "body": "mening",
+      "date": "2021-09-20T12:20:42.078Z",
+      "id": 5
+    }
+  ]
+}

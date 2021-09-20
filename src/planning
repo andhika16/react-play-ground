@@ -5,8 +5,13 @@ card component
 - tanggal 
 - judul
 - isi 
+- word break
 
 
+DiaryPage 
+- get id
+- populate single data with id
+- create date
 
 
 
