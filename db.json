@@ -1,31 +1,10 @@
 {
   "posts": [
     {
-      "title": "adasd",
-      "body": "asdad",
+      "title": "test",
+      "body": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit provident earum, nobis porro corporis, recusandae temporibus minima aspernatur, debitis voluptate eum at. A, quaerat. Corrupti, accusantium. Quasi, maiores sequi! Neque quidem ea soluta dicta veniam consequuntur nisi esse facere. Delectus ab quis nesciunt. Sed debitis quo eaque eum neque quasi dicta natus laudantium accusamus dolore! Ea labore distinctio culpa modi, minima maxime tempora neque iste voluptatibus! Labore molestiae rerum quo necessitatibus aliquid illum odio. Magni et facilis vitae quasi, laboriosam fugiat voluptas commodi illum nostrum delectus minus, blanditiis magnam eligendi? Nostrum adipisci eius eaque sapiente qui pariatur, vero blanditiis amet?\n",
+      "date": "9/21/2021",
       "id": 1
-    },
-    {
-      "title": "adsad",
-      "body": "asdsdsadasdsadsadasdasdasdasda",
-      "id": 2
-    },
-    {
-      "title": "bkjbk",
-      "body": "bkjbkjbj",
-      "id": 3
-    },
-    {
-      "title": "asdadsa",
-      "body": "asdasdasdada",
-      "date": "2021-09-20T12:20:27.646Z",
-      "id": 4
-    },
-    {
-      "title": "mantap",
-      "body": "mening",
-      "date": "2021-09-20T12:20:42.078Z",
-      "id": 5
     }
   ]
 }

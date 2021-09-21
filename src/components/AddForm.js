@@ -1,15 +1,13 @@
 import { useState } from "react";
 
-const AddForm = ({handlePost}) => {
+const AddForm = ({handlePost,edit}) => {
     const [title,setTitle] = useState('')
     const [body, setBody] = useState('')
 
     const onSubmit = async (e) => {
         e.preventDefault()
-        const date = new Date()
-
         
-        
+        const date = new Date().toLocaleDateString() // ? memasukkan tanggal ke dalam diary yang ditambahkan
 
         handlePost({ title,body,date })
         
@@ -20,7 +18,8 @@ const AddForm = ({handlePost}) => {
 
     
     return (
-        <div className="form">
+
+        <div className={edit ? "edit-form" : "form"}>
             <form action="#" onSubmit={onSubmit}>   
                 <label >Title</label>
                 <input type="text" name="title" placeholder="title"

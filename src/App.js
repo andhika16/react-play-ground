@@ -2,12 +2,13 @@ import './App.css';
 import Headers from './components/Headers';
 import Home from './components/Home';
 import { useEffect, useState } from "react";
+import {BrowserRouter as Router, Route,Switch} from 'react-router-dom';
+import DiaryPage from './components/DiaryPage';
 
 function App() {
 
   const [dataDiary, setDataDiary] = useState([])
-
-  const url = 'http://localhost:8000/posts'
+  const url = 'http://localhost:8000/posts/'
   // fetching data menggunakan useEffect
   useEffect(() => {
       
@@ -41,17 +42,24 @@ function App() {
 
   }
 
-  const handleDeleteDiary = () => {
 
-  }
 
   
 
 
   return (
     <div className="container">
-      <Headers />
-      <Home data={dataDiary} onAdd={ handlePostDiary }/>
+      <Router>
+        <Headers />
+        <Switch>
+        <Route exact path="/">
+            <Home data={dataDiary}
+              onAdd={handlePostDiary}
+            />
+        </Route>
+        <Route path="/diary-page/:id" component={DiaryPage} />
+        </Switch>
+    </Router>
     </div>
   );
 }

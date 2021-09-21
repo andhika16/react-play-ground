@@ -26,7 +26,7 @@ code {
 }
 
 .page .row {
-  width: 90%;
+  width: 50%;
   margin: 10px;
   display: flex;
   flex-direction: column;
@@ -41,8 +41,8 @@ code {
 
 .container {
   display: flex;
+  justify-content: center;
   flex-direction: column;
-  align-items: center;
   padding: 20px;
   background-color: rgb(235, 235, 235);
   max-width: 900px;
@@ -51,33 +51,95 @@ code {
 .card {
   display: flex;
   flex-direction: row;
+  text-decoration: none;
   align-items: center;
-  padding: 20px;
+  color: rgb(49, 49, 49);
+  padding: 5px;
+  overflow: hidden;
   box-sizing: border-box;
   border: none;
 }
 
+.card:hover {
+  color: rgb(0, 0, 0);
+}
+
 .card span {
   margin: 10px;
-  height: 100px;
+  height: 100;
   border-left: 1px solid #000;
 }
 
+.card .date {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.card .date p,h1 {
+  margin: 0;
+  padding:0;
+}
+
 .head {
-  width: 95%;
   color: #fff;
   text-align: center;
   margin-top: 20px;
   background-color: rgb(102, 102, 102);
-  border-radius: 20px;
   padding: 10px;
 }
 
+.diary-page {
+  background-color: #fff;
+  margin-top: 20px;
+  padding: 20px;
+}
+
+.diary {
+  display: flex;
+  align-items: center;
+}
+
+
+
+.diary-page .utility {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.diary-page .diary .diary-body {
+
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+
+
+}
+
+
+
+
+
+button {
+  color: white;
+  padding: 5px 14px;
+  margin: 0px 8px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+
 /* FORM INPUT */
 
+.edit-form {
+  width:50%;
+}
 
-
-.form textarea[type=text], select , input {
+.form textarea[type=text], select , input ,.edit-form textarea[type=text], select , input {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -87,9 +149,9 @@ code {
   box-sizing: border-box;
 }
 
-.form input[type=submit] {
+.form input[type=submit],.edit-form input[type=submit] {
   width: 100%;
-  background-color: #4CAF50;
+  background-color: #32cf37;
   color: white;
   padding: 14px 20px;
   margin: 8px 0;
@@ -98,7 +160,7 @@ code {
   cursor: pointer;
 }
 
-.form input[type=submit]:hover {
+.form input[type=submit]:hover ,.edit-form input[type=submit]:hover {
   background-color: #45a049;
 }
 
@@ -107,13 +169,35 @@ code {
   padding: 5px;
 }
 
-.form {
-  border-radius: 5px;
+.form,.edit-form {
+  text-align: center;
   background-color: #ffffff;
-  padding: 20px;
+  padding: 10px;
 }
 
 
-@media (max-width: 900px) {
+@media (min-width: 900px) {
+  
+}
+@media (max-width: 700px) {
+  .diary{
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .diary-page .diary .diary-body {
+    padding: 10px;
+    width: 100%;
+    height: 200px;
+  }
+  
+
+  .diary .edit-form {
+    order: 1;
+  }
+
+  .edit-form {
+    width: 100%;
+  }
 
 }
