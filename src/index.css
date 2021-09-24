@@ -17,23 +17,41 @@ code {
 }
 
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 85.5%;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+
 
 
 .page {
   display: flex;
   margin-top: 20px;
-  padding: 20px;
 }
 
 .page .row {
-  width: 50%;
-  margin: 10px;
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
+  width: 100%;
+  margin-right: 2px;
 }
 
 .page .row .col {
-  margin: 5px;
+  margin-bottom: 2px;
 }
 
 
@@ -51,29 +69,23 @@ code {
 .card {
   display: flex;
   flex-direction: row;
-  text-decoration: none;
   align-items: center;
-  color: rgb(49, 49, 49);
+  color: rgb(0, 0, 0);
   padding: 5px;
-  overflow: hidden;
-  box-sizing: border-box;
   border: none;
 }
 
 .card:hover {
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  background-color: rgb(105, 105, 105);
 }
 
-.card span {
-  margin: 10px;
-  height: 100;
-  border-left: 1px solid #000;
-}
 
 .card .date {
   display: flex;
   align-items: center;
   flex-direction: column;
+  width: 90px;
 }
 
 .card .date p,h1 {
@@ -81,17 +93,31 @@ code {
   padding:0;
 }
 
+.card-body {
+  display: flex;  
+  flex-direction: column;
+}
+
 .head {
+  display: flex;
   color: #fff;
-  text-align: center;
+  justify-content: center;
   margin-top: 20px;
+  border-radius: 5px;
   background-color: rgb(102, 102, 102);
   padding: 10px;
 }
 
+  
+.head button {
+  display: none;
+  position: relative;
+}
+
 .diary-page {
   background-color: #fff;
-  margin-top: 20px;
+  border-radius: 5px;
+  margin-top: 10px;
   padding: 20px;
 }
 
@@ -134,7 +160,6 @@ button {
 
 
 /* FORM INPUT */
-
 .edit-form {
   width:50%;
 }
@@ -164,22 +189,55 @@ button {
   background-color: #45a049;
 }
 
-.formParent {
-  margin: 10px;
-  padding: 5px;
-}
 
 .form,.edit-form {
   text-align: center;
+  border-radius: 5px;
   background-color: #ffffff;
   padding: 10px;
 }
+
+
 
 
 @media (min-width: 900px) {
   
 }
 @media (max-width: 700px) {
+  .head {
+    justify-content: space-between;
+  }
+  .head button {
+    display: block;
+    z-index: 1;
+  }
+  .page ,.page .row,.page .row .col{
+    padding: 0;
+    margin: 5px 0px;
+  }
+  .form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width:100vw;
+  }
+
+  .formParent.active {
+    opacity: 1;
+    left: 0;
+  }  
+
+  
+  
+  .formParent {
+    position: fixed;
+    left: 100%;
+    top: 0;
+
+
+  }
+
   .diary{
     flex-direction: column;
     padding: 10px;

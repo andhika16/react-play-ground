@@ -1,66 +1,28 @@
 import './App.css';
+import {useState} from 'react';
 import Headers from './components/Headers';
 import Home from './components/Home';
-import { useEffect, useState } from "react";
-import {BrowserRouter as Router, Route,Switch} from 'react-router-dom';
+import {BrowserRouter as Router, Route} from 'react-router-dom';
 import DiaryPage from './components/DiaryPage';
 
 function App() {
 
-  const [dataDiary, setDataDiary] = useState([])
-  const url = 'http://localhost:8000/posts/'
-  // fetching data menggunakan useEffect
-  useEffect(() => {
-      
-    const getDataDiary = async () => {
-      const dataDiaryFromServer = await fetchDiary()
-      setDataDiary(dataDiaryFromServer)
-      }
-    
-      getDataDiary()
-    
-  }, [])
-
-  const fetchDiary = async () => {
-    
-    const res = await fetch(url)
-    const data = res.json()
-    return data
-  }
-
-
-  const handlePostDiary = async (diary) => {
-
-    const res =  await fetch(`http://localhost:8000/posts`, {
-      method: 'POST',
-      headers: {'Content-Type' : 'Application/json'},
-      body : JSON.stringify(diary)
-   })
-
-    const data = await res.json()
-    setDataDiary([...dataDiary,data])
-
-  }
-
-
-
-  
+  const [showButton , setShowbutton] = useState(true)
 
 
   return (
-    <div className="container">
       <Router>
-        <Headers />
-        <Switch>
+      <div className="container">
+        
+        <Headers showBtn={ showButton }/>
         <Route exact path="/">
-            <Home data={dataDiary}
-              onAdd={handlePostDiary}
-            />
+          <Home setBtn={ setShowbutton }/>
         </Route>
-        <Route path="/diary-page/:id" component={DiaryPage} />
-        </Switch>
-    </Router>
+        <Route path="/diary-page/:id"  >
+          <DiaryPage showBtn={ setShowbutton }/>
+        </Route >
     </div>
+    </Router>
   );
 }
 

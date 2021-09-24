@@ -13,6 +13,16 @@ DiaryPage
 - populate single data with id
 - create date
 - adding image
+- edit form belum di handling
+
+
+
+
+problem
+ - halaman utama home belum responsive (solved)
+ - add diary button saat menuju diaryPage error harus dihilangkan (solved tpi masih kurang maksimal)
+ - adding diary tidak otomatis muncul di beranda,harus reload page 
+ - edit data form belum dibuat
 
 
 

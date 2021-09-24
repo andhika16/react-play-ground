@@ -1,28 +1,18 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import {useParams,useHistory} from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import AddForm from './AddForm'
-const DiaryPage = () => {
+import Button from './Button';
+import UseFetch from './UseFetch';
+const DiaryPage = ({showBtn}) => {
     const { id } = useParams()
     const history = useHistory()
-    const [loading,setLoading] = useState(false)
-    const [dataDiary,setDataDiary] = useState([])
-    const [showForm,setShowForm] = useState(false)
-    useEffect(() => {
-        const getData = async () => {
-            const dataFromServer = await getDataDiary()
-            setDataDiary(dataFromServer)
-            setLoading(true)
-        }
-        
-        getData()
-    },[])
+    const [showForm, setShowForm] = useState(false)
+// ? fungsi ini digunakan untuk memunculkan tombol saat kita click salah satu card
+    const buttonShowClick = () => showBtn(true) 
+    const { data:diary, isPending } = UseFetch(`http://localhost:8000/posts/${id}`)
 
-    const getDataDiary = async () => {
-        const res = await fetch(`http://localhost:8000/posts/${id}`)
-        const data = await res.json()
-        return data
-    }
+ 
 
     const handleDeleteDiary = async () => {
         await fetch(`http://localhost:8000/posts/${id}`, {
@@ -39,20 +29,16 @@ const DiaryPage = () => {
 
     }
 
-    const {title,body} = dataDiary
+    const {title,body} = diary
     return (
-        <div class="diary-page">
+        <div className="diary-page">
             <div className="utility">
                 <Link to="/">
-                    <button style={{backgroundColor:'#32cf37'}}>Kembali</button>
+                    <Button name="Kembali" color="#32cf37" func={ buttonShowClick}/>
                 </Link>
                 <div>
-                    <button style={{ backgroundColor: '#d0df00' }}
-                        onClick={handleForm}>
-                        Edit</button>
-                    <button style={{ backgroundColor: '#df0000' }}
-                        onClick={handleDeleteDiary}>Delete
-                    </button>
+                    <Button name="Edit" color="#d0df00" func={ handleForm } />
+                    <Button name="Delete" color="#df0000" func={ handleDeleteDiary } />
                 </div>
                 
             </div>
@@ -60,7 +46,7 @@ const DiaryPage = () => {
                 {showForm ? <AddForm edit='edit-form' /> : <></>}
                 <div className="diary-body">
                     <h1>{title}</h1>
-                    {!loading ? <h1>loading</h1>:''   }
+                    {isPending ? <h1>loading</h1>:''   }
                     <h4>{body}</h4>
                 </div>
             </div>
